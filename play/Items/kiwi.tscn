@@ -1,0 +1,147 @@
+[gd_scene load_steps=22 format=3 uid="uid://5xepbw00ors5"]
+
+[ext_resource type="Script" path="res://Items/item.gd" id="1_l37mm"]
+[ext_resource type="Texture2D" uid="uid://d3kn52pn2qudx" path="res://ress/Items/Fruits/Kiwi.png" id="1_t02l5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fu8jm"]
+radius = 7.0
+height = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwaim"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmh57"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oppgw"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apywf"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn1w0"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrvdi"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cxbc"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aa8u"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8dvkb"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tixu0"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afaeh"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0bpl"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffsnj"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lguo4"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ungd7"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v2ij"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysuyv"]
+atlas = ExtResource("1_t02l5")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ck0tr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwaim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmh57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oppgw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apywf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vn1w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrvdi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cxbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aa8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8dvkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tixu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afaeh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0bpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffsnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lguo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ungd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8v2ij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysuyv")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 20.0
+}]
+
+[node name="Kiwi" type="Area2D"]
+script = ExtResource("1_l37mm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fu8jm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ck0tr")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.729884
